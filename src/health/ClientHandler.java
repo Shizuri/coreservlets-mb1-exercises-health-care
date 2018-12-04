@@ -1,15 +1,24 @@
 package health;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
 import javax.faces.bean.ManagedBean;
 
 @ManagedBean
 public class ClientHandler {
 
-	private String id, name, healthPlanName;
+	private String id, name, healthPlanName = "First Plan";
 	
 	private HealthPlanFinder planFider = new HealthPlansData();
 	
 	private HealthPlan chosenPlan;
+	
+	public ClientHandler() {
+		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("HH:mm:ss");
+		LocalDateTime now = LocalDateTime.now();
+		System.out.println("Client Handler instantiated at: " + dtf.format(now));
+	}
 
 	public HealthPlan getChosenPlan() {
 		return chosenPlan;
