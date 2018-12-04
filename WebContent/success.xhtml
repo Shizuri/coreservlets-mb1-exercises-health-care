@@ -1,0 +1,18 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+<h:head>
+<title>Success</title>
+<link href="./css/styles.css" rel="stylesheet" type="text/css"/>
+</h:head>
+<h:body>
+<h1 class="title">Success</h1>
+
+<p>Welcome #{clientHandler.name} with ID: #{clientHandler.id}</p>
+<p>You have chosen the #{clientHandler.healthPlanName} Health Plan.</p>
+<p>This will cost #{clientHandler.chosenPlan.premium}.</p>
+<p>Please call us at: #{clientHandler.chosenPlan.phoneNumber} for details.</p>
+<a href="pick-health-plan.jsf">Back to start</a>
+
+</h:body></html>
